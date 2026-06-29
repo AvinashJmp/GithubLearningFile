@@ -5,7 +5,7 @@ on:
       environment:
         description: 'choose the input option'
         required: true
-        default: 'dev
+        default:dev
   jobs:
     input-demo:
       runs-on: ubuntu-latest
