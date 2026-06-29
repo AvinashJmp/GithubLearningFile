@@ -6,7 +6,7 @@ jobs:
     steps:
     - name: use context variable
       run: |
-      echo "the name of the owner of the repositry is ${{github.actor}}"
-      echo "the repositry name is ${{github.repositry}}"
+        echo "the name of the owner of the repositry is ${{github.actor}}"
+        echo "the repositry name is ${{github.repository}}"
 
       
