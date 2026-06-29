@@ -11,7 +11,7 @@ on:
           - dev
           - build
           - test
-        type: string
+        type: choice
 
       artifact-tag:
         description: enter the value of artifact tag
@@ -23,4 +23,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy an APP
-        run: echo "Deploying an application ${{ inputs.environment }}"
+        run: echo "Deploying an artifact to ${{ inputs.artifact-tag}} yo application ${{ inputs.environment }}"
