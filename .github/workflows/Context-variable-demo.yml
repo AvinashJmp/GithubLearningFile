@@ -8,6 +8,6 @@ jobs:
       run: |
         echo "the name of the owner of the repositry is ${{github.actor}}"
         echo "the repositry name is ${{github.repository}}"
-        echo "envirement is ${{github.event_name}}"
+       # echo "environment is ${{job.container.id}}"
 
       
