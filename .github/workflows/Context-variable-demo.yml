@@ -1,0 +1,12 @@
+name : context Variable demo
+on: push
+jobs:
+  context-demo:
+    runs-on: ubuntu-latest
+    steps:
+    - name: use context variable
+      run: |
+      echo "the name of the owner of the repositry is ${{github.actor}}"
+      echo "the repositry name is ${{github.repositry}}"
+
+      
