@@ -9,9 +9,9 @@ on:
         default: 'dev'
         type: string
 
-jobs:
-  input-demo:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy an APP
-        run: echo "Deploying an application ${{ inputs.environment }}"
+  jobs:
+    input-demo:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Deploy an APP
+          run: echo "Deploying an application ${{ inputs.environment }}"
