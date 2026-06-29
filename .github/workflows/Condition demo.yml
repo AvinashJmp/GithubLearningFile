@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checking if condition
-        if: github_ref_name == 'main'
+        if: github.ref_name == 'main'
         run: echo"this condition is true"
       - name: this is whithout condition
         run: echo"always run"
