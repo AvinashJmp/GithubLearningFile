@@ -7,6 +7,15 @@ on:
         description: 'choose the input option'
         required: true
         default: 'dev'
+        options:
+          - dev
+          - build
+          - test
+        type: string
+
+      artifact-tag:
+        description: enter the value of artifact tag
+        required: true
         type: string
 
 jobs:
