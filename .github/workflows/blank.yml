@@ -3,9 +3,9 @@ on:
   workflow_dispatch:
     inputs:
       environment:
-        description: choose the input option
+        description: 'choose the input option'
         required: true
-        default: dev
+        default: 'dev
   jobs:
     input-demo:
       runs-on: ubuntu-latest
