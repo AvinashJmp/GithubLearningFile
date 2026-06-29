@@ -1,6 +1,6 @@
 name: input-demo1
 on:
-  workflow
+  workflow_dispatch:
     inputs:
       environment:
         description: choose the input option
