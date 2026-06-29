@@ -1,9 +1,9 @@
 name: INPUTDEMO
 on:
-  workflow_dispatch:
+  workflow_dispatch: 
     inputs:
       environment:
-        description: 'choose the input option'
+        description: choose the input option
         required: true
         default: dev
   jobs:
