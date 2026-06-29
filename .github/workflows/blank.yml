@@ -11,4 +11,5 @@ on:
       runs-on: ubuntu-latest
       steps:
         - name: Deploy an APP
-          run: echo "Deploying an application ${{inputs.environment}}"
+          run: echo "Deploying an application ${{ github.event.inputs.environment }}"
+
