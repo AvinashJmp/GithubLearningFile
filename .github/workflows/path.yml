@@ -1,0 +1,13 @@
+name: Pushevent
+on :
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/**'
+jobs:
+  sourcefile:
+    runs-on: ubuntu-latest
+      steps:
+        - name: source file change
+          run: echo "code change only in source folder"
