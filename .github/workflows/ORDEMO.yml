@@ -1,0 +1,16 @@
+name: OR DEMO
+on: push
+   
+jobs:
+  condition-or-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checking my GHA username
+        if: github.actor == 'Avinash' || github.actor == 'AvinashJmp'
+        run: echo "username is AvinshJmp"
+
+      - name: second condition
+        run: echo "if not true"
+        
+        
+      
