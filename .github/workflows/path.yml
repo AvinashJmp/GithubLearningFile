@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: source file change
-        run: echo "code change only in source folder"
+        run: echo "code change only in source fol"
