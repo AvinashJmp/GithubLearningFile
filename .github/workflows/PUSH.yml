@@ -1,16 +1,18 @@
-name: Branch Filter Learning Workflow
+name: Marketplace Actions Learning
 
-# पहले हम सिर्फ 'on: push' लिखते थे, अब हम इसे कंट्रोल करेंगे
-on:
-  push:
-    branches:
-      - main     # इसका मतलब है: यह वर्कफ़्लो सिर्फ और सिर्फ 'main' ब्रांच पर पुश होने पर चलेगा।
+on: [push]
 
 jobs:
-  production-check-job:
+  explore-actions-job:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Print Message
+      # स्टेप 1: गिटहब मार्केटप्लेस से बने-बनाए 'checkout' एक्शन का उपयोग करना
+      - name: Fetch Code from GitHub to Runner
+        uses: actions/checkout@v4    # यहाँ 'uses' का जादू है, यह हमारा कोड रनर में डाउनलोड कर देगा
+
+      # स्टेप 2: अब जब कोड आ चुका है, तो हम 'run' कमांड से फाइलें देख सकते हैं
+      - name: Verify Downloaded Files
         run: |
-          echo "यह मैसेज आपको तभी दिखेगा जब कोड 'main' ब्रांच पर पुश हुआ होगा!"
-          echo "कोड पुश करने वाले का नाम है: ${{ github.actor }}"
+          echo "Listing all project files brought by the checkout action:"
+          ls -la
