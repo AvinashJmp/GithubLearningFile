@@ -1,0 +1,17 @@
+name: Multi-Line Terminal Info
+
+on: push
+
+jobs:
+  system-check-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Execute Multiple Commands Together
+        # पाइप सिंबल (|) का जादू यहाँ देखें
+        run: |
+          echo "--- सिस्टम की जानकारी ---"
+          uname -a
+          echo "--- वर्तमान डायरेक्टरी का रास्ता ---"
+          pwd
+          echo "--- इस कंप्यूटर पर उपलब्ध मेमोरी ---"
+          free -m
